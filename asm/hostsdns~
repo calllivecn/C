@@ -1,0 +1,30 @@
+#!/bin/sh
+
+dnsname='
+www.baidu.com
+yunpan.360.cn
+c12.yunpan.360.cn
+ftp.gnu.org
+
+
+'
+
+
+for q in $dnsname
+do
+
+T=$(ping -c 1 -n $q 2>&1 |grep 'from' || echo error)
+
+#echo $T
+
+	if [ "$T" = "error" ]
+	then
+	echo \# ERROR $q
+
+	else
+
+	echo $T |awk '{print $4}' |sed "s/:/	$q/" 
+	
+	fi
+
+done

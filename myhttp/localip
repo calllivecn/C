@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#
+wget -O ip2city.asp http://www.ip138.com/ip2city.asp 2>/dev/null
+
+#cat ip2city.asp | tail -1
+
+cat ip2city.asp | tail -1 | awk -F '[' '{print $2}' | awk -F ']' '{print $1}'
+
+rm ip2city.asp
+

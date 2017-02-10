@@ -1,0 +1,22 @@
+1.寄存器引用
+
+引用寄存器要在寄存器号前加百分号%,如“movl %eax, %ebx”。
+
+
+80386有如下寄存器：
+
+8个32-bit寄存器%eax，%ebx，%ecx，%edx，%edi，%esi，%ebp，%esp；
+
+8个16-bit寄存器，它们事实上是上面8个32-bit寄存器的低16位：%ax，%bx，%cx，%dx，%di，%si，%bp，%sp；
+
+8个8-bit寄存器：%ah，%al，%bh，%bl，%ch，%cl，%dh，%dl。它们事实上是寄存器%ax，%bx，%cx，%dx的高8位和低8位；
+
+6个段寄存器：%cs(code)，%ds(data)，%ss(stack), %es，%fs，%gs；
+
+3个控制寄存器：%cr0，%cr2，%cr3；  
+
+6个debug寄存器：%db0，%db1，%db2，%db3，%db6，%db7；
+
+2个测试寄存器：%tr6，%tr7；
+
+8个浮点寄存器栈：%st(0)，%st(1)，%st(2)，%st(3)，%st(4)，%st(5)，%st(6)，%st(7)
