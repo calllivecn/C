@@ -1,4 +1,4 @@
-	.file	"main.c"
+	.file	"point.c"
 	.text
 	.globl	main
 	.type	main, @function
@@ -10,10 +10,10 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	movl	$0, -8(%rbp)
-	movl	$1000000000, -4(%rbp)
-	nop
-.L2:
+	movl	%edi, -20(%rbp)
+	movq	%rsi, -32(%rbp)
+	movq	$592447090, -8(%rbp)
+	movq	$16, -8(%rbp)
 	movl	$0, %eax
 	popq	%rbp
 	.cfi_def_cfa 7, 8
@@ -21,5 +21,5 @@ main:
 	.cfi_endproc
 .LFE0:
 	.size	main, .-main
-	.ident	"GCC: (Ubuntu 4.8.2-19ubuntu1) 4.8.2"
+	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
 	.section	.note.GNU-stack,"",@progbits
