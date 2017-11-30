@@ -1,5 +1,5 @@
 /******* http
-¿Í»§¶Ë³ÌĞò
+å®¢æˆ·ç«¯ç¨‹åº
  httpclient.c ************/ 
 #include <stdio.h> 
 #include <stdlib.h> 
@@ -15,11 +15,11 @@
 #include <ctype.h> 
   
 //////////////////////////////httpclient.c 
-//¿ªÊ¼
+//å¼€å§‹
 /////////////////////////////////////////// 
   
 /******************************************** 
-¹¦ÄÜ£ºËÑË÷×Ö·û´®ÓÒ±ßÆğµÄµÚÒ»¸öÆ¥Åä×Ö·û
+åŠŸèƒ½ï¼šæœç´¢å­—ç¬¦ä¸²å³è¾¹èµ·çš„ç¬¬ä¸€ä¸ªåŒ¹é…å­—ç¬¦
  
 ********************************************/ 
 char * Rstrchr(char * s, char x)         { 
@@ -32,7 +32,7 @@ char * Rstrchr(char * s, char x)         {
 } 
   
 /******************************************** 
-¹¦ÄÜ£º°Ñ×Ö·û´®×ª»»ÎªÈ«Ğ¡Ğ´
+åŠŸèƒ½ï¼šæŠŠå­—ç¬¦ä¸²è½¬æ¢ä¸ºå…¨å°å†™
   
 ********************************************/ 
 void ToLowerCase(char * s)         { 
@@ -43,7 +43,7 @@ void ToLowerCase(char * s)         {
 } 
   
 /**************************************************************  
-¹¦ÄÜ£º´Ó×Ö·û´®srcÖĞ·ÖÎö³öÍøÕ¾µØÖ·ºÍ¶Ë¿Ú£¬²¢µÃµ½ÓÃ»§ÒªÏÂÔØµÄÎÄ¼ş
+åŠŸèƒ½ï¼šä»å­—ç¬¦ä¸²srcä¸­åˆ†æå‡ºç½‘ç«™åœ°å€å’Œç«¯å£ï¼Œå¹¶å¾—åˆ°ç”¨æˆ·è¦ä¸‹è½½çš„æ–‡ä»¶
  
 ***************************************************************/
  
@@ -76,30 +76,30 @@ void GetHost(char *src, char *web, char *file, int *port){
 /********************************************************************* 
 *filename: httpclient.c  
 *purpose: HTTP
-Ğ­Òé¿Í»§¶Ë³ÌĞò£¬¿ÉÒÔÓÃÀ´ÏÂÔØÍøÒ³
+åè®®å®¢æˆ·ç«¯ç¨‹åºï¼Œå¯ä»¥ç”¨æ¥ä¸‹è½½ç½‘é¡µ
   
 *wrote by: zhoulifa(zhoulifa@163.com) 
-ÖÜÁ¢·¢
+å‘¨ç«‹å‘
 (http://zhoulifa.bokee.com) 
                   Linux
-°®ºÃÕß
+çˆ±å¥½è€…
  Linux
-ÖªÊ¶´«²¥Õß
+çŸ¥è¯†ä¼ æ’­è€…
  SOHO
-×å
+æ—
  
-¿ª·¢Õß
+å¼€å‘è€…
  
-×îÉÃ³¤
+æœ€æ“…é•¿
 C
-ÓïÑÔ
+è¯­è¨€
  
 *date time:2006-03-11 21:49:00  
 *Note: 
-ÈÎºÎÈË¿ÉÒÔÈÎÒâ¸´ÖÆ´úÂë²¢ÔËÓÃÕâĞ©´úÂë£¬µ±È»°üÀ¨ÄãµÄÉÌÒµÓÃÍ¾
+ä»»ä½•äººå¯ä»¥ä»»æ„å¤åˆ¶ä»£ç å¹¶è¿ç”¨è¿™äº›ä»£ç ï¼Œå½“ç„¶åŒ…æ‹¬ä½ çš„å•†ä¸šç”¨é€”
  
 *                                
-µ«Çë×ñÑ­
+ä½†è¯·éµå¾ª
 GPL  
 *********************************************************************/ 
 int main(int argc, char *argv[]) 
@@ -126,13 +126,13 @@ int main(int argc, char *argv[])
          printf("parameter.1 is: %s\n", argv[1]); 
          ToLowerCase(argv[1]);
 /*
-½«²ÎÊı×ª»»ÎªÈ«Ğ¡Ğ´
+å°†å‚æ•°è½¬æ¢ä¸ºå…¨å°å†™
 */ 
          printf("lowercase parameter.1 is: %s\n", argv[1]); 
   
          GetHost(argv[1], host_addr, host_file, &portnumber);
 /*
-·ÖÎöÍøÖ·¡¢¶Ë¿Ú¡¢ÎÄ¼şÃûµÈ
+åˆ†æç½‘å€ã€ç«¯å£ã€æ–‡ä»¶åç­‰
 */ 
          printf("webhost:%s\n", host_addr); 
          printf("hostfile:%s\n", host_file);  
@@ -140,9 +140,9 @@ int main(int argc, char *argv[])
   
          if((host=gethostbyname(host_addr))==NULL)
 /*
-È¡µÃÖ÷»ú
+å–å¾—ä¸»æœº
 IP
-µØÖ·
+åœ°å€
 */ 
          {  
            fprintf(stderr,"Gethostname error, %s\n", strerror(errno)); 
@@ -150,14 +150,14 @@ IP
          } 
   
          /* 
-¿Í»§³ÌĞò¿ªÊ¼½¨Á¢
+å®¢æˆ·ç¨‹åºå¼€å§‹å»ºç«‹
  sockfd
-ÃèÊö·û
+æè¿°ç¬¦
  */  
          if((sockfd=socket(AF_INET,SOCK_STREAM,0))==-1)/*
-½¨Á¢
+å»ºç«‹
 SOCKET
-Á¬½Ó
+è¿æ¥
 */ 
          {  
            fprintf(stderr,"Socket Error:%s\a\n",strerror(errno)); 
@@ -165,7 +165,7 @@ SOCKET
          } 
   
          /* 
-¿Í»§³ÌĞòÌî³ä·şÎñ¶ËµÄ×ÊÁÏ
+å®¢æˆ·ç¨‹åºå¡«å……æœåŠ¡ç«¯çš„èµ„æ–™
  */  
          bzero(&server_addr,sizeof(server_addr)); 
          server_addr.sin_family=AF_INET; 
@@ -173,11 +173,11 @@ SOCKET
          server_addr.sin_addr=*((struct in_addr *)host->h_addr); 
   
          /* 
-¿Í»§³ÌĞò·¢ÆğÁ¬½ÓÇëÇó
+å®¢æˆ·ç¨‹åºå‘èµ·è¿æ¥è¯·æ±‚
  */  
          if(connect(sockfd,(struct sockaddr *)(&server_addr),sizeof(struct sockaddr))==-1)
 /*
-Á¬½ÓÍøÕ¾
+è¿æ¥ç½‘ç«™
 */ 
          {  
            fprintf(stderr,"Connect Error:%s\a\n",strerror(errno)); 
@@ -187,13 +187,13 @@ SOCKET
          	sprintf(request,"GET /%s HTTP/1.1\r\nAccept: */*\r\nAccept-Language: zh-cn,zh\r\nUser-Agent: Mozilla/4.0\r\nHost: %s:%d\r\nConnection: close\r\n\r\n",host_file, host_addr, portnumber); 
          printf("%s", request);
 /*
-×¼±¸
+å‡†å¤‡
 request
-£¬½«Òª·¢ËÍ¸øÖ÷»ú
+ï¼Œå°†è¦å‘é€ç»™ä¸»æœº
 */ 
   
          /*
-È¡µÃÕæÊµµÄÎÄ¼şÃû
+å–å¾—çœŸå®çš„æ–‡ä»¶å
 */  	//host_file && 
          if(*host_file)         pt = Rstrchr(host_file, '/'); 
          else pt = 0; 
@@ -211,9 +211,9 @@ request
          printf("local filename to write:%s\n\n", local_file); 
   
          /*
-·¢ËÍ
+å‘é€
 http
-ÇëÇó
+è¯·æ±‚
 request*/ 
          send = 0;totalsend = 0; 
          nbytes=strlen(request); 
@@ -233,7 +233,7 @@ request*/
 
 	printf( "\nThe   following   is   the   response   header:\n "); 
     i=0; 
-    /*   Á¬½Ó³É¹¦ÁË£¬½ÓÊÕhttpÏìÓ¦£¬response   */ 
+    /*   è¿æ¥æˆåŠŸäº†ï¼Œæ¥æ”¶httpå“åº”ï¼Œresponse   */ 
     while((nbytes=read(sockfd,buffer,1))==1) 
     { 
         if(i   <   4)     { 
@@ -244,15 +244,15 @@ request*/
         else     { 
   
 
-/*°ÑhttpÍ·ĞÅÏ¢´òÓ¡ÔÚÆÁÄ»ÉÏ*/
+/*æŠŠhttpå¤´ä¿¡æ¯æ‰“å°åœ¨å±å¹•ä¸Š*/
 //	printf( "%c",   buffer[0]);
-          fwrite(buffer,   1,   1,   fp);/*½«httpÖ÷ÌåĞÅÏ¢Ğ´ÈëÎÄ¼ş*/ 
+          fwrite(buffer,   1,   1,   fp);/*å°†httpä¸»ä½“ä¿¡æ¯å†™å…¥æ–‡ä»¶*/ 
             i++; 
-            if(i%1024   ==   0)     fflush(fp);/*Ã¿1KÊ±´æÅÌÒ»´Î*/ 
+            if(i%1024   ==   0)     fflush(fp);/*æ¯1Kæ—¶å­˜ç›˜ä¸€æ¬¡*/ 
         } 
     } 
     fclose(fp); 
-    /*   ½áÊøÍ¨Ñ¶   */ 
+    /*   ç»“æŸé€šè®¯   */ 
     close(sockfd); 
     exit(0); 
 }
